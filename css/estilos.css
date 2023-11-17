@@ -1,0 +1,306 @@
+/* Colors
+Background Body #ebe3e3
+Background TopBar #F2E9DC
+background navBar #FCFCFC 
+Fuente principal #0A2E36*/
+
+/* FONTS
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Slab', serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ebe3e3;
+    font-family: 'Poppins', sans-serif;
+    color: #0A2E36;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+h2 {
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif
+}
+
+/* NAV */
+
+header .topBar {
+    display: none;
+}
+
+header .navBar {
+    display: none;
+}
+
+header .navBarCelu {
+    display: none;
+}
+
+header .showMenu .navBarCelu {
+    background-color: #FCFCFC;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    animation: slideInFromLeft 0.5s ease-in-out;
+}
+
+header .showMenu .navBarCelu img {
+    width: 200px;
+}
+
+header .showMenu .navBarCelu a {
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #0A2E36;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+header .showMenu .navBarCelu .navBarRRSS {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+header .showMenu .navBarCelu a:hover {
+    font-weight: 800;
+    transition: 0.2s;
+}
+
+header .showMenu .navBarCelu .navBarRRSS a {
+    text-decoration: none;
+    color: #0A2E36;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* MENU BOTÓN TOGGLE */
+header .toggle {
+    width: 70px;
+    height: 70px;
+    background: rgb(235, 227, 227);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    overflow: hidden;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 50%;
+}
+
+.toggle span {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 4px;
+    background: #0A2E36;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+/* ANIMACIÓN TOGGLE */
+.toggle span:nth-child(1) {
+    transform: translateY(-15px);
+    width: 30px;
+    /* left: 15px; */
+}
+
+.toggle.active span:nth-child(1) {
+    width: 40px;
+    transform: translateY(1px) rotate(45deg);
+    transition-delay: 0.125s;
+}
+
+.toggle span:nth-child(2) {
+    /* transform: translateY(15px); */
+    width: 30px;
+    /* left: 15px; */
+}
+
+.toggle.active span:nth-child(2) {
+    width: 40px;
+    transform: translateY(-2px) rotate(315deg);
+    transition-delay: 0.25s;
+}
+
+.toggle span:nth-child(3) {
+    transform: translateY(15px);
+    width: 30px;
+    /* left: 15px; */
+}
+
+.toggle.active span:nth-child(3) {
+    transform: translateX(70px);
+    transition: 0.5s ease-in-out;
+}
+
+
+
+.seccionUno {
+    background-color: yellow;
+}
+
+.seccionDos {
+    background-color: red;
+}
+
+.seccionTres {
+    background-color: blue;
+}
+
+.seccionCuatro {
+    background-color: green;
+}
+
+.seccionCinco {
+    background-color: pink;
+}
+
+@media (min-width: 992px) {
+
+    header .topBar {
+        /* disposición del contenido del topbar */
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+
+        /* estilos del contenido de topbar */
+        background-color: #F2E9DC;
+        font-family: 'Roboto Slab', serif;
+        height: 40px;
+    }
+
+    header .topBar a {
+        color: #0A2E36;
+        text-decoration: none;
+        padding-right: 20px;
+        font-weight: 700;
+        font-size: 13px;
+    }
+
+    header .navBar {
+        background-color: rgba(0, 0, 0, 0.1);
+        height: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    header .navBar img {
+        width: 100px;
+        }
+
+    header .fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #F9F8F8;
+        /* Puedes ajustar el color de fondo según tu diseño */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+        /* Sombra para resaltar */
+        animation: slideDown 0.7s ease;
+        /* Duración, transición y tipo de animación */
+    }
+
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+
+    header .navBar a {
+        font-size: 18px;
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        color: #0A2E36;
+    }
+
+    header .toggle {
+        display: none;
+    }
+
+    .containerNavBar {
+        display: none;
+    }
+
+
+
+    .itemMenu:hover {
+        font-weight: 900;
+        transition: 0.2s;
+    }
+}
+
+
+/*ANIMATIONS*/
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
